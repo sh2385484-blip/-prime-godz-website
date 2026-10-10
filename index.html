@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="PRIME GODZ Gaming Services — PC Optimization, FPS Boost, Free Fire Sensitivity, Mouse Settings and Emulator Setup.">
+<title>PRIME GODZ | Gaming Performance</title>
+
+<style>
+:root {
+  --bg: #080808;
+  --panel: #111111;
+  --red: #ff1010;
+  --red-dark: #8b0000;
+  --text: #f5f5f5;
+  --muted: #a0a0a0;
+  --border: #351010;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5,5,5,.96);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 1000;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  color: var(--red);
+  text-shadow: 0 0 20px #ff000055;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 13px;
+  color: #aaa;
+  transition: .2s;
+}
+
+nav a:hover { color: var(--red); }
+
+.hero {
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 22px;
+  background:
+    radial-gradient(ellipse at 50% 35%, #57000055, transparent 55%),
+    linear-gradient(180deg, #100606, #080808);
+}
+
+.hero-inner { max-width: 900px; }
+
+.badge {
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid #8b1515;
+  color: #ff6969;
+  background: #ff000008;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+h1 {
+  font-size: clamp(45px, 8vw, 90px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+  margin: 28px 0;
+  font-weight: 1000;
+}
+
+h1 span {
+  color: var(--red);
+  text-shadow: 0 0 35px #ff000055;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border: 1px solid #491010;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn-primary {
+  background: #df0000;
+  color: white;
+  border-color: #ff2525;
+  box-shadow: 0 0 20px #ff000020;
+}
+
+.btn-primary:hover {
+  background: #ff1717;
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px #ff000050;
+}
+
+.btn-secondary { background: #111; }
+
+.btn-secondary:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+section {
+  max-width: 1200px;
+  padding: 80px 25px;
+  margin: auto;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(30px, 5vw, 45px);
+  line-height: 1.2;
+  margin: 12px 0;
+  text-transform: uppercase;
+}
+
+.sub {
+  color: var(--muted);
+  max-width: 650px;
+  margin-bottom: 35px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #171111, #0b0b0b);
+  border: 1px solid #321515;
+  padding: 28px;
+  transition: .25s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--red);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #a31313;
+  box-shadow: 0 10px 30px #ff000012;
+}
+
+.icon { font-size: 30px; }
+
+.card h3 {
+  margin: 14px 0 8px;
+  font-size: 19px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.step {
+  padding: 25px;
+  background: #101010;
+  border: 1px solid #321515;
+  border-top: 2px solid var(--red);
+}
+
+.step strong {
+  color: var(--red);
+  font-size: 20px;
+}
+
+.step p {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.form-wrap {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.form-box {
+  padding: 30px;
+  background: linear-gradient(145deg, #171111, #0b0b0b);
+  border: 1px solid #491414;
+}
+
+label {
+  display: block;
+  margin: 17px 0 8px;
+  font-size: 13px;
+  color: #ddd;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  background: #080808;
+  color: white;
+  border: 1px solid #392020;
+  font-family: inherit;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 1px solid var(--red);
+  border-color: var(--red);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+form button {
+  width: 100%;
+  margin-top: 22px;
+}
+
+#status {
+  margin-top: 14px;
+  color: #ff6666;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.note {
+  color: #888;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+footer {
+  background: #050505;
+  border-top: 1px solid #351010;
+  padding: 35px 20px;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+}
+
+footer strong {
+  color: var(--red);
+  letter-spacing: 3px;
+}
+
+@media(max-width: 760px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav { gap: 15px; }
+
+  .hero { min-height: 520px; }
+
+  .grid, .process, .form-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  section { padding: 50px 20px; }
+
+  .form-box { padding: 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#">PRIME <span>GODZ</span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#request">Request Service</a>
+      <a href="https://discord.gg/d9T mZfkzG" target="_blank" rel="noopener">Discord</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="badge">PC GAMING • PERFORMANCE • ESPORTS</div>
+    <h1>UNLEASH YOUR<br><span>DARK SIDE.</span></h1>
+    <p>Welcome to PRIME GODZ — your gaming community for PC optimization, FPS troubleshooting, Free Fire sensitivity and personalized gaming support.</p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="#request">REQUEST A SERVICE ↗</a>
+      <a class="btn btn-secondary" href="https://discord.gg/d9TmZfkzG" target="_blank" rel="noopener">JOIN DISCORD</a>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="eyebrow">Our Expertise</div>
+  <h2>Gaming Services</h2>
+  <p class="sub">Tell us about your gaming setup and the issues you want help with.</p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="icon">⚡</div>
+      <h3>PC Optimization</h3>
+      <p>Personalized Windows and system configuration for your gaming setup.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🔥</div>
+      <h3>FPS & Lag Fix</h3>
+      <p>Help investigate stuttering, frame drops and gaming performance issues.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🎯</div>
+      <h3>Free Fire Sensitivity</h3>
+      <p>Find suitable sensitivity settings for your device and play style.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🖱️</div>
+      <h3>Mouse Settings</h3>
+      <p>Guidance on DPI, polling rate and in-game mouse configuration.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🛠️</div>
+      <h3>Emulator Setup</h3>
+      <p>Configuration support for emulators and game compatibility.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">💀</div>
+      <h3>Custom Service</h3>
+      <p>Have a different gaming issue? Tell us what you need.</p>
+    </article>
+  </div>
+</section>
+
+<section id="process">
+  <div class="eyebrow">Three Simple Steps</div>
+  <h2>How It Works</h2>
+
+  <div class="process">
+    <div class="step">
+      <strong>01. Submit</strong>
+      <p>Fill out the form with your gaming setup and requirements.</p>
+    </div>
+
+    <div class="step">
+      <strong>02. Review</strong>
+      <p>Your requirements can be reviewed by the support team.</p>
+    </div>
+
+    <div class="step">
+      <strong>03. Connect</strong>
+      <p>Continue the discussion through your chosen Discord contact method.</p>
+    </div>
+  </div>
+</section>
+
+<section id="request">
+  <div class="form-wrap">
+
+    <div>
+      <div class="eyebrow">Customer Support</div>
+      <h2>Request Your Service.</h2>
+      <p class="sub">Share your requirements with PRIME GODZ. Give us enough details to understand your gaming issue.</p>
+      <p>⚡ Performance-focused support</p>
+      <p>🎮 Gaming configuration</p>
+      <p>💬 Discord community</p>
+      <br>
+      <a class="btn btn-secondary" href="https://discord.gg/d9TmZfkzG" target="_blank" rel="noopener">OPEN DISCORD ↗</a>
+    </div>
+
+    <div class="form-box">
+      <form id="serviceForm">
+
+        <label for="username">Discord Username *</label>
+        <input id="username" name="username" placeholder="Your Discord username" required maxlength="100">
+
+        <label for="service">Select Service *</label>
+        <select id="service" name="service" required>
+          <option value="">Choose a service</option>
+          <option>PC Optimization</option>
+          <option>FPS Boost / Lag Fix</option>
+          <option>Free Fire Sensitivity</option>
+          <option>Mouse Settings</option>
+          <option>Emulator Setup</option>
+          <option>Custom Service</option>
+        </select>
+
+        <label for="specs">PC / Device Specifications *</label>
+        <textarea id="specs" name="specs" placeholder="CPU, GPU, RAM, phone or emulator..." required maxlength="2000"></textarea>
+
+        <label for="budget">Budget (Optional)</label>
+        <input id="budget" name="budget" placeholder="Your budget, if any" maxlength="100">
+
+        <label for="contact">Preferred Contact Method *</label>
+        <select id="contact" name="contact" required>
+          <option value="">Choose contact method</option>
+          <option>Discord DM</option>
+          <option>Discord Support Channel</option>
+        </select>
+
+        <label for="details">Describe Your Requirements *</label>
+        <textarea id="details" name="details" placeholder="Explain the problem and what you need..." required maxlength="3000"></textarea>
+
+        <button class="btn btn-primary" type="submit">SUBMIT SERVICE REQUEST ↗</button>
+        <p id="status" role="status" aria-live="polite"></p>
+        <p class="note">The request form requires a working server connection before requests can be delivered to Discord.</p>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>PRIME GODZ</strong><br>
+  Built for the gaming community.<br>
+  © 2026 PRIME GODZ. All rights reserved.
+</footer>
+
+<script>
+const form = document.getElementById("serviceForm");
+const statusBox = document.getElementById("status");
+
+form.addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  const button = form.querySelector('button[type="submit"]');
+  button.disabled = true;
+  statusBox.textContent = "Sending your request...";
+
+  try {
+    const response = await fetch("/.netlify/functions/request-service", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(Object.fromEntries(new FormData(form).entries()))
+    });
+
+    if (!response.ok) throw new Error("Request failed");
+
+    statusBox.textContent = "Request submitted successfully!";
+    form.reset();
+  } catch (error) {
+    statusBox.textContent = "The form is not connected yet. Please contact us through Discord.";
+  } finally {
+    button.disabled = false;
+  }
+});
+</script>
+
+</body>
+</html>
